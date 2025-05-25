@@ -1,0 +1,50 @@
+{
+    "manifestVersion": 1,
+    "id": "custom-maven-build-task",
+    "name": "Maven Custom Modules Extension",
+    "version": "1.0.0",
+    "publisher": "dbejarano120",
+    "public": true,
+    "description": "Provide the modules you want Maven to build.",
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ], 
+    "content": {
+        "details": {
+            "path": "README.md"
+        },
+        "license": {
+            "path": "LICENSE.txt"
+        }
+    },
+    "repository": {
+        "type": "git",
+        "uri": "https://github.com/dbejarano120/maven-plugin"
+    },
+    "icons": {
+        "default": "images/icon.png"
+    },
+    "categories": [
+        "Azure Pipelines"
+    ],
+    "files": [
+        {
+            "path": "customavenbuildtask"
+        }
+        
+    ],
+    "contributions": [
+        {
+            "id": "custom-maven-build-validator-task",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "customavenbuildtask"
+            }
+        }
+    ]
+}
