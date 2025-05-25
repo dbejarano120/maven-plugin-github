@@ -1,11 +1,16 @@
 {
-  "name": "customavenbuildtask",
+  "name": "@dbejarano120/maven-plugin-github",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dbejarano120/maven-plugin-github.git"
+  },
   "scripts": {
     "test": "mocha -r ts-node/register test/**/*.test.ts",
-    "build": "tsc index.ts --outDir ."
+    "build": "tsc index.ts --outDir .",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [],
   "author": "",
